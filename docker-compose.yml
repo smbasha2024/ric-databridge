@@ -4,11 +4,11 @@ services:
 
   databridge-frontend:
     build: 
-      context: ./frontend/ric-databridge
+      context: ./frontend/ric-databridge-client
     container_name: ric_databridge_frontend
     restart: unless-stopped
     env_file:
-      - ./frontend/ric-databridge/.env
+      - ./frontend/ric-databridge-client/.env
     depends_on:
       - databridge-server
     networks:
